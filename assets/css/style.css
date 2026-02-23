@@ -1,0 +1,459 @@
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.6s ease-in forwards;
+}
+
+/* Phone verification lock */
+body.phone-verification-locked {
+    overflow: hidden !important;
+}
+
+.phone-verification-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(13, 17, 28, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1040;
+    animation: phoneOverlayFade 0.25s ease both;
+}
+
+@keyframes phoneOverlayFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skeleton-loader {
+    background: #f6f7f8;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f6f6f6 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 5px;
+}
+
+/* Skeleton for Image */
+.skeleton.image {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+/* Skeleton for Text Elements */
+.skeleton.text {
+    width: 80%;
+    height: 15px;
+    margin: 5px auto;
+}
+
+/* Skeleton for Auction Number */
+.skeleton.auction-number {
+    width: 50%;
+    height: 20px;
+    margin: 10px auto;
+}
+
+/* Skeleton for Small Countdown Boxes */
+.skeleton.small-box {
+    width: 40px;
+    height: 25px;
+    margin: auto;
+}
+
+/* Skeleton for High Bid Amount */
+.skeleton.high-bid {
+    width: 60%;
+    height: 20px;
+    margin: auto;
+}
+
+/* Skeleton for Storage Facility Name */
+.skeleton.storage-name {
+    width: 70%;
+    height: 18px;
+    margin: 10px auto;
+}
+
+/* Skeleton for Address */
+.skeleton.address {
+    width: 90%;
+    height: 14px;
+    margin: 5px auto;
+}
+
+/* Skeleton for Button */
+.skeleton.button {
+    width: 50%;
+    height: 30px;
+    margin: auto;
+}
+
+/* Skeleton Loading Animation */
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Targets small screens */
+    .login-popup {
+        margin-top: 20px !important;
+    }
+}
+
+.alertNotification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    /* Centering on the viewport */
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centering trick */
+    margin: 4px 10px;
+    color: inherit;
+    flex: 1 1 auto;
+    white-space: pre-line;
+    background: #fff;
+    color: #363636;
+    line-height: 1.3;
+    will-change: transform;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    pointer-events: auto;
+    padding: 8px 10px;
+    border-radius: 8px;
+    z-index: 9999;
+    /* Ensures it stays on top */
+}
+
+.bootstrap-switch-handle-on.bootstrap-switch-primary {
+    color: #fff;
+    background: #1C421D !important;
+}
+
+
+.table-skeleton-overlay {
+    position: absolute;
+    background: #f0f0f0;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: shimmer 1.2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -400px 0;
+    }
+
+    100% {
+        background-position: 400px 0;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 260px;
+    /* Adjust based on your image height */
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+/* Colors */
+:root {
+    --brand-primary: #29b5a8;
+    --brand-secondary: #ff8300;
+    --gray: #6b7381;
+    --gray-light: #8a919c;
+    --gray-lighter: #b0b6bf;
+}
+
+.jumbotron {
+    background: var(--gray);
+    color: var(--gray-lighter);
+}
+
+.jumbotron h1 {
+    color: #fff;
+}
+
+.example>.row {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid rgba(176, 182, 191, 0.5);
+}
+
+.example>.row:first-of-type {
+    border: none;
+    height: auto;
+    text-align: left;
+}
+
+.example h3 {
+    font-weight: 400;
+}
+
+.example h3>small {
+    font-weight: 200;
+    font-size: 0.75em;
+    color: var(--gray-light);
+}
+
+.example h6 {
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 3.32px;
+    text-transform: uppercase;
+    color: var(--gray-lighter);
+    margin: 0;
+    line-height: 5rem;
+}
+
+/* Toggle Button Base */
+.btn-toggle {
+    margin: 0 4rem;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    background: var(--gray-lighter);
+    color: var(--gray);
+}
+
+.btn-toggle:focus,
+.btn-toggle.focus,
+.btn-toggle:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-toggle:before,
+.btn-toggle:after {
+    line-height: 1.5rem;
+    width: 4rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.25s;
+}
+
+.btn-toggle:before {
+    content: "Monthly";
+    left: -8rem;
+}
+
+.btn-toggle:after {
+    content: "Yearly";
+    right: -8rem;
+    opacity: 0.5;
+}
+
+.btn-toggle>.handle {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 1.125rem;
+    background: #fff;
+    transition: left 0.25s;
+}
+
+.btn-toggle.active {
+    background-color: var(--text-yello-light);
+    transition: background-color 0.25s;
+}
+
+.btn-toggle.active>.handle {
+    left: 1.5rem;
+}
+
+.btn-toggle.active:before {
+    opacity: 0.5;
+}
+
+.btn-toggle.active:after {
+    opacity: 1;
+}
+
+/* Sizes */
+.btn-toggle.btn-lg {
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 2.5rem;
+}
+
+.btn-toggle.btn-lg:before,
+.btn-toggle.btn-lg:after {
+    font-size: 1rem;
+    width: 5rem;
+    line-height: 2.5rem;
+}
+
+.btn-toggle.btn-lg>.handle {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 1.875rem;
+    top: 0.3125rem;
+    left: 0.3125rem;
+}
+
+.btn-toggle.btn-lg.active>.handle {
+    left: 2.5rem;
+}
+
+.btn-toggle.btn-sm {
+    height: 1.25rem;
+    width: 2.5rem;
+    border-radius: 1.25rem;
+}
+
+.btn-toggle.btn-sm:before,
+.btn-toggle.btn-sm:after {
+    line-height: 1.25rem;
+    font-size: 0.55rem;
+    width: 0.5rem;
+}
+
+.btn-toggle.btn-sm>.handle {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 0.75rem;
+    top: 0.125rem;
+    left: 0.125rem;
+}
+
+.btn-toggle.btn-sm.active>.handle {
+    left: 1.25rem;
+}
+
+.btn-toggle.btn-xs {
+    height: 1rem;
+    width: 2rem;
+    border-radius: 1rem;
+}
+
+.btn-toggle.btn-xs:before,
+.btn-toggle.btn-xs:after {
+    display: none;
+}
+
+.btn-toggle.btn-xs>.handle {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    top: 0.25rem;
+    left: 0.25rem;
+}
+
+.btn-toggle.btn-xs.active>.handle {
+    left: 1rem;
+}
+
+/* Secondary color variant */
+.btn-toggle.btn-secondary.active {
+    background-color: var(--brand-secondary);
+}
+
+.membership-card {
+    background: #f1f0f0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.membership-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    border: 2px solid white;
+    color: black;
+}
+
+.membership-card.active-sub {
+    background: var(--text-yello-light);
+    border: 2px solid var(--text-yello-light);
+    cursor: default;
+    color: white;
+}
+
+.membership-card.active-sub:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #e2e2e2 25%, #f3f3f3 50%, #e2e2e2 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 6px;
+    display: block;
+}
+
+.skeleton-title { height: 20px; border-radius: 4px; }
+.skeleton-text { height: 14px; border-radius: 4px; }
+.skeleton-btn { height: 36px; border-radius: 6px; }
+.skeleton-box { background: #f8f9fa; border: 1px solid #ddd; }
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

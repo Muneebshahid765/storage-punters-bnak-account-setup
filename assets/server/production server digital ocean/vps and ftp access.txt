@@ -1,0 +1,24 @@
+digital ocean login
+
+Google Login
+tobias@mammothstorage.com.au
+MCTc2023!
+
+
+
+
+Server access:
+
+IP Address: 170.64.191.190
+Username: root
+Pass: (use ssh key "storage_auction_private_key" with no password)
+
+
+Database Access:
+
+username = doadmin
+password = AVNS_WJYi6pxL6pVnSoW5_oe
+host = dbaas-db-9087971-do-user-22761798-0.m.db.ondigitalocean.com
+port = 25060
+database = defaultdb
+sslmode = REQUIRED

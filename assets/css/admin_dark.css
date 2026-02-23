@@ -1,0 +1,328 @@
+/* Admin Dark Theme */
+:root {
+    --admin-bg: #0f172a;
+    --admin-sidebar-bg: #0f172a;
+    --admin-card-bg: #1e293b;
+    --admin-border: #334155;
+    --admin-text: #f1f5f9;
+    --admin-text-muted: #94a3b8;
+    --admin-accent: #3b82f6;
+}
+
+.admin-dark-theme.dashboard-container-modern {
+    background-color: var(--admin-bg);
+    color: var(--admin-text);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-dark-theme .sidebar-modern {
+    background-color: var(--admin-sidebar-bg);
+    border-right: 1px solid var(--admin-border);
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.admin-dark-theme .sidebar-brand-name {
+    color: #ffffff;
+}
+
+.admin-dark-theme .sidebar-link-modern {
+    color: var(--admin-text-muted);
+    margin: 4px 12px;
+}
+
+.admin-dark-theme .sidebar-link-modern:hover,
+.admin-dark-theme .sidebar-link-modern.active {
+    background-color: var(--admin-card-bg);
+    color: #ffffff;
+}
+
+.admin-dark-theme .sidebar-section-divider {
+    color: #475569;
+    padding: 16px 24px 8px;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* Main Content */
+.admin-dark-theme .main-content-modern {
+    background-color: var(--admin-bg);
+    padding: 40px;
+    flex-grow: 1;
+    min-width: 0;
+    /* Prevent flex-item from overflowing */
+}
+
+.admin-dark-theme .dash-title-modern {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Cards & Sections */
+.admin-dark-theme .stat-card-modern,
+.admin-dark-theme .content-section-modern,
+.admin-dark-theme .settings-card-modern {
+    background-color: var(--admin-card-bg);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.admin-dark-theme .stat-label-modern {
+    color: var(--admin-text-muted);
+}
+
+.admin-dark-theme .stat-value-modern {
+    color: #ffffff !important;
+}
+
+/* Forms */
+.admin-dark-theme .modern-form-control {
+    background-color: var(--admin-bg);
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.admin-dark-theme .modern-form-control:focus {
+    border-color: var(--admin-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Tables */
+.admin-dark-theme .table-modern {
+    color: var(--admin-text);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Robust Table Header Override */
+.admin-dark-theme .table-modern thead th,
+.admin-dark-theme .dataTables_wrapper .dataTables_scrollHead thead th,
+.admin-dark-theme table.dataTable thead th {
+    background-color: var(--admin-sidebar-bg) !important;
+    background: var(--admin-sidebar-bg) !important;
+    color: #ffffff !important;
+    border-bottom: 2px solid var(--admin-border) !important;
+    padding: 12px 15px !important;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.admin-dark-theme .table-modern tbody td,
+.admin-dark-theme table.dataTable tbody td {
+    color: var(--admin-text) !important;
+    border-bottom: 1px solid var(--admin-border);
+    padding: 14px 15px;
+    vertical-align: middle;
+}
+
+.admin-dark-theme .table-modern tr:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* DataTables Styling */
+.admin-dark-theme .dataTables_wrapper .dataTables_length,
+.admin-dark-theme .dataTables_wrapper .dataTables_filter,
+.admin-dark-theme .dataTables_wrapper .dataTables_info,
+.admin-dark-theme .dataTables_wrapper .dataTables_paginate {
+    color: var(--admin-text-muted) !important;
+    margin-bottom: 15px;
+}
+
+.admin-dark-theme .dataTables_wrapper .dataTables_filter input {
+    background-color: var(--admin-bg) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(2px);
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Toggle */
+#sidebarToggle {
+    border: none;
+    color: #ffffff;
+    padding: 5px;
+    background: transparent;
+    display: none;
+    /* Desktop hidden */
+}
+
+#sidebarToggle i {
+    font-size: 2rem;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+    #sidebarToggle {
+        display: block;
+    }
+
+    .admin-dark-theme.dashboard-container-modern {
+        display: block;
+    }
+
+    .admin-dark-theme .sidebar-modern {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1050;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .admin-dark-theme .sidebar-modern.mobile-open {
+        transform: translateX(0);
+    }
+
+    .admin-dark-theme .main-content-modern {
+        padding: 20px 15px;
+        width: 100%;
+    }
+
+    .admin-dark-theme .dash-title-modern {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-dark-theme .dash-header-modern {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .admin-dark-theme .d-flex.gap-2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .admin-dark-theme .dataTables_wrapper .dataTables_length,
+    .admin-dark-theme .dataTables_wrapper .dataTables_filter {
+        text-align: left !important;
+        float: none !important;
+        width: 100%;
+    }
+
+    .admin-dark-theme .dataTables_wrapper .dataTables_filter input {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 5px;
+    }
+
+    .admin-dark-theme .table-responsive {
+        border: 1px solid var(--admin-border);
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    .admin-dark-theme .table-modern {
+        min-width: 1000px;
+    }
+}
+
+/* Stats Grid Responsive */
+@media (max-width: 1024px) {
+    .stats-grid-modern {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .stats-grid-modern {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* DataTables Global Theming Fixes */
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_filter label {
+    color: var(--admin-text-muted) !important;
+}
+
+.dataTables_wrapper select,
+.dataTables_wrapper input {
+    background-color: var(--admin-bg) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+/* Visibility Fixes for Bootstrap Utilities */
+.admin-dark-theme .text-dark {
+    color: #ffffff !important;
+}
+
+.admin-dark-theme .text-muted {
+    color: #94a3b8 !important;
+    /* var(--admin-text-muted) */
+}
+
+/* Dashboard Specific Headers */
+.admin-dark-theme .section-title-modern {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.admin-dark-theme .section-subtitle-modern {
+    color: var(--admin-text-muted);
+    margin-bottom: 30px;
+}
+
+.admin-dark-theme .settings-form-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--admin-border);
+    padding-bottom: 10px;
+}
+
+.admin-dark-theme .btn-modern-save {
+    background-color: var(--admin-accent);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.admin-dark-theme .btn-modern-save:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}

@@ -1,0 +1,175 @@
+/* -------------------
+   General Styles
+------------------- */
+body {
+    font: 14px/1.3 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    display: none;
+}
+
+#title {
+    background: #fff;
+    padding: 6px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    /* always stacked */
+    align-items: center;
+    justify-content: center;
+}
+
+#title h1 {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 16px;
+    /* ✅ mobile size as default */
+}
+
+/* -------------------
+   Fixed Header (on scroll)
+------------------- */
+#title.fixed {
+    position: fixed;
+    top: 104px;
+    /* works for mobile + desktop */
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    animation: slideDown 0.4s ease;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#title.fixed h1 {
+    font-size: 16px;
+    /* same as default */
+    margin-bottom: 8px;
+}
+
+#title.fixed #countdown {
+    font-size: 22px;
+    /* ✅ mobile size as default */
+}
+
+#title.fixed #note {
+    display: block;
+    font-size: 12px;
+    /* ✅ mobile size as default */
+    margin: 6px 0 0;
+    text-align: center;
+}
+
+/* -------------------
+   Animations
+------------------- */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* -------------------
+   Note text
+------------------- */
+#note {
+    color: #666;
+    font-size: 12px;
+    /* ✅ smaller default */
+    margin: 6px auto;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+/* -------------------
+   Countdown Styles
+------------------- */
+.countdownHolder {
+    width: 100%;
+    max-width: 260px;
+    /* ✅ compact like mobile */
+    margin: 0 auto;
+    font: 22px/1.5 'Open Sans Condensed', sans-serif;
+    /* ✅ mobile size as default */
+    text-align: center;
+    letter-spacing: -2px;
+}
+
+.position {
+    display: inline-block;
+    height: 1.6em;
+    overflow: hidden;
+    position: relative;
+    width: 1.05em;
+}
+
+.digit {
+    position: absolute;
+    display: block;
+    width: 1em;
+    background-color: #007550;
+    border-radius: 0.2em;
+    text-align: center;
+    color: #fff;
+}
+
+.digit.static {
+    box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.35);
+    background: linear-gradient(to top, #1C421D 50%, #007550 50%);
+}
+
+.countDiv {
+    display: inline-block;
+    width: 12px;
+    /* ✅ smaller like mobile */
+    height: 1.6em;
+    position: relative;
+}
+
+.countDiv:before,
+.countDiv:after {
+    position: absolute;
+    width: 4px;
+    /* ✅ smaller like mobile */
+    height: 4px;
+    background-color: #444;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -2px;
+    content: '';
+    box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.5);
+}
+
+.countDiv:before {
+    top: 0.5em;
+}
+
+.countDiv:after {
+    top: 0.9em;
+}
+
+/* -------------------
+   Responsive Design
+------------------- */
+@media (max-width: 768px) {
+    #title.fixed {
+        top: 66px;
+        /* adjust for mobile header */
+    }
+}
