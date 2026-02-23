@@ -74,50 +74,50 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 // Use environment variables if available (Docker), otherwise fallback to Production keys
-// $db['default'] = array(
-//    'dsn'      => '',
-//    'hostname' => getenv('MYSQL_HOST') ?: 'database-1.cluster-cn4kyiocmfhj.ap-southeast-2.rds.amazonaws.com',
-//    'username' => getenv('MYSQL_USER') ?: 'admin',
-//    'password' => getenv('MYSQL_PASSWORD') ?: 'Q6KkpgmgjKPedWOxFxLf',
-//    'database' => getenv('MYSQL_DATABASE') ?: 'storageauctions_db1',
-//    'dbdriver' => 'mysqli',
-//    'port'     => getenv('MYSQL_PORT') ?: 3306,
-//    'dbprefix' => '',
-//    'pconnect' => FALSE,
-//    'db_debug' => (ENVIRONMENT !== 'production'),
-//    'cache_on' => FALSE,
-//    'cachedir' => '',
-//    'char_set' => 'utf8mb4',
-//    'dbcollat' => 'utf8mb4_general_ci',
-//    'swap_pre' => '',
-//    'encrypt' => getenv('MYSQL_HOST') ? FALSE : TRUE, // Only encrypt remote connections
-//    'compress' => FALSE,
-//    'failover' => array(),
-//    'save_queries' => TRUE,
-//    'ssl_options' => getenv('MYSQL_HOST') ? array() : array('ssl_verify' => false)
-// );
-
 $db['default'] = array(
-	'dsn'      => '',
-	'hostname' => '127.0.0.1',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'storagepunters',
-	'dbdriver' => 'mysqli',
-	'port'     => 3306,
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => TRUE, // local mein TRUE
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8mb4',
-	'dbcollat' => 'utf8mb4_general_ci',
-	'swap_pre' => '',
-	'encrypt'  => FALSE, // ❌ local ke liye FALSE
-	'compress' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
+   'dsn'      => '',
+   'hostname' => getenv('MYSQL_HOST') ?: 'database-1.cluster-cn4kyiocmfhj.ap-southeast-2.rds.amazonaws.com',
+   'username' => getenv('MYSQL_USER') ?: 'admin',
+   'password' => getenv('MYSQL_PASSWORD') ?: 'Q6KkpgmgjKPedWOxFxLf',
+   'database' => getenv('MYSQL_DATABASE') ?: 'storageauctions_db1',
+   'dbdriver' => 'mysqli',
+   'port'     => getenv('MYSQL_PORT') ?: 3306,
+   'dbprefix' => '',
+   'pconnect' => FALSE,
+   'db_debug' => (ENVIRONMENT !== 'production'),
+   'cache_on' => FALSE,
+   'cachedir' => '',
+   'char_set' => 'utf8mb4',
+   'dbcollat' => 'utf8mb4_general_ci',
+   'swap_pre' => '',
+   'encrypt' => getenv('MYSQL_HOST') ? FALSE : TRUE, // Only encrypt remote connections
+   'compress' => FALSE,
+   'failover' => array(),
+   'save_queries' => TRUE,
+   'ssl_options' => getenv('MYSQL_HOST') ? array() : array('ssl_verify' => false)
 );
+
+// $db['default'] = array(
+// 	'dsn'      => '',
+// 	'hostname' => '127.0.0.1',
+// 	'username' => 'root',
+// 	'password' => '',
+// 	'database' => 'storagepunters',
+// 	'dbdriver' => 'mysqli',
+// 	'port'     => 3306,
+// 	'dbprefix' => '',
+// 	'pconnect' => FALSE,
+// 	'db_debug' => TRUE, // local mein TRUE
+// 	'cache_on' => FALSE,
+// 	'cachedir' => '',
+// 	'char_set' => 'utf8mb4',
+// 	'dbcollat' => 'utf8mb4_general_ci',
+// 	'swap_pre' => '',
+// 	'encrypt'  => FALSE, // ❌ local ke liye FALSE
+// 	'compress' => FALSE,
+// 	'failover' => array(),
+// 	'save_queries' => TRUE
+// );
 
 //$db['default'] = array(
 //	'dsn'      => '',

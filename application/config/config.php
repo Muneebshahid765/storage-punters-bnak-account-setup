@@ -23,13 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 //*/
-// if (isset($_SERVER['HTTP_HOST'])) {
-//    $config['base_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
-// } else {
-//    $config['base_url'] = 'https://storagepunters.com/';
-// }
+if (isset($_SERVER['HTTP_HOST'])) {
+   $config['base_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+} else {
+   $config['base_url'] = 'https://storagepunters.com/';
+}
 
-$config['base_url'] = 'http://localhost/storagepunters-feature/';
+// $config['base_url'] = 'http://localhost/storagepunters-feature/';
 //$config['base_url'] = 'https://bergmediadigital.com/storagepunters/';
 
 /*
@@ -426,7 +426,7 @@ $config['sess_samesite'] = 'Lax';
 */
 $config['cookie_prefix']	= '';
 $config['cookie_domain']	= '';
-$config['cookie_path']		= '/storagepunters-feature/';
+$config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;
 $config['cookie_samesite'] 	= 'Lax';
