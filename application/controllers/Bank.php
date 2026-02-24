@@ -302,9 +302,6 @@ class Bank extends CI_Controller
                 'capabilities' => [
                     'transfers' => ['requested' => true],
                 ],
-                'tos_acceptance' => [
-                    'service_agreement' => 'recipient',
-                ],
                 'external_account' => [
                     'object' => 'bank_account',
                     'country' => 'AU',
