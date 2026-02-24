@@ -206,9 +206,6 @@ class StripeController extends CI_Controller
                 'capabilities' => [
                     'transfers' => ['requested' => true],
                 ],
-                'tos_acceptance' => [
-                    'service_agreement' => 'recipient',
-                ],
                 'metadata' => [
                     'platform_user_id' => (string)$userId,
                     'created_at' => date('Y-m-d H:i:s'),
@@ -826,9 +823,6 @@ class StripeController extends CI_Controller
                 ],
                 'capabilities' => [
                     'transfers' => ['requested' => true],
-                ],
-                'tos_acceptance' => [
-                    'service_agreement' => 'recipient',
                 ],
             ]);
 
@@ -3156,9 +3150,6 @@ class StripeController extends CI_Controller
                 'capabilities' => [
                     'transfers' => ['requested' => true],
                 ],
-                'tos_acceptance' => [
-                    'service_agreement' => 'recipient',
-                ],
                 'metadata' => [
                     'user_id'       => $userId,
                     'account_label' => $uniqueLabel,
@@ -3386,9 +3377,6 @@ class StripeController extends CI_Controller
                     'email' => $userSessionData['email'],
                     'capabilities' => [
                         'transfers' => ['requested' => true],
-                    ],
-                    'tos_acceptance' => [
-                        'service_agreement' => 'recipient',
                     ],
                     'business_type' => 'company', // or individual, maybe let them pick later or default
                 ]);

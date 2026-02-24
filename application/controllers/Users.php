@@ -1519,9 +1519,6 @@ class Users extends CI_Controller
                 'capabilities' => [
                     'transfers' => ['requested' => true],
                 ],
-                'tos_acceptance' => [
-                    'service_agreement' => 'recipient',
-                ],
                 'metadata' => [
                     'user_id' => $userId,
                     'platform' => 'StoragePunters',
